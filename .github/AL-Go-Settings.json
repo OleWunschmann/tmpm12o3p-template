@@ -1,8 +1,26 @@
 {
   "$schema": "https://raw.githubusercontent.com/OleWunschmann/AL-Go/update-with-customALGoFiles-of-template/Actions/.Modules/settings.schema.json",
-  "type": "PTE",
   "templateUrl": "https://github.com/OleWunschmann/AL-Go@update-with-customALGoFiles-of-template",
   "runs-on": "ubuntu-latest",
+  "MicrosoftTelemetryConnectionString": "",
+  "type": "PTE",
   "shell": "pwsh",
-  "MicrosoftTelemetryConnectionString": ""
+  "customALGoFiles": {
+    "filesToInclude": [
+      {
+        "filter": "CustomTemplateFile.Default.txt"
+      }
+    ],
+    "filesToRemove": [
+      {
+        "filter": "CustomTemplateFile.Legacy.txt"
+      }
+    ],
+    "filesToExclude": [
+      {
+        "sourceFolder": ".github/workflows",
+        "filter": "DeployReferenceDocumentation.yaml"
+      }
+    ]
+  }
 }
